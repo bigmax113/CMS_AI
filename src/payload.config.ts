@@ -639,16 +639,46 @@ const ensureSeedMediaDocument = async (
     })
   }
 
-  return payload.create({
-    collection: mediaSlug,
-    data: {
-      alt,
-      externalImageURL,
-      filename,
-      mimeType,
-    },
-    filePath: resolveSeedPublicAssetPath(externalImageURL),
-  })
+  try {
+    return await payload.create({
+      collection: mediaSlug,
+      data: {
+        alt,
+        externalImageURL,
+        filename,
+        mimeType,
+      },
+      filePath: resolveSeedPublicAssetPath(externalImageURL),
+    })
+  } catch (error: unknown) {
+    const conflict = error as {
+      data?: { errors?: Array<{ path?: string }> }
+      status?: number
+    }
+    const filenameConflict =
+      conflict.status === 400 &&
+      conflict.data?.errors?.some((fieldError) => fieldError.path === 'filename')
+
+    if (!filenameConflict) {
+      throw error
+    }
+
+    const recovered = await payload.find({
+      collection: mediaSlug,
+      limit: 1,
+      where: {
+        filename: {
+          equals: filename,
+        },
+      },
+    })
+
+    if (recovered.docs[0]) {
+      return recovered.docs[0]
+    }
+
+    throw error
+  }
 }
 
 export const ensureLorgarFrontendSeed = async (payload: any) => {
