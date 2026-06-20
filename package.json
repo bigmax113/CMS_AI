@@ -17,7 +17,7 @@
     "test": "pnpm run test:int && pnpm run test:e2e",
     "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --import=tsx/esm\" playwright test --config=playwright.config.ts",
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts",
-    "vercel:build": "node scripts/check-vercel-env.mjs && pnpm payload migrate && pnpm deploy:migrate && pnpm build",
+    "vercel:build": "node scripts/vercel-build.mjs",
     "vercel:check": "node scripts/check-vercel-env.mjs",
     "wp:baseline": "node scripts/wp-migration.mjs baseline",
     "wp:export": "node scripts/wp-migration.mjs export",

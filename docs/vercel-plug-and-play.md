@@ -13,7 +13,7 @@ This branch contains the same CMS/front/admin code as the Render build, with a V
 
 - `vercel.json` with Vercel install and build commands.
 - `.env.vercel.example` with the full required environment variable set.
-- `pnpm vercel:build` that validates env, runs Payload migrations, applies the lightweight deploy migration, then builds Next.js.
+- `pnpm vercel:build` that validates env, applies the lightweight deploy migration, then builds Next.js.
 - `pnpm vercel:check` for a quick env preflight.
 
 ## Deployment checklist
@@ -25,7 +25,7 @@ This branch contains the same CMS/front/admin code as the Render build, with a V
 5. Set the Google Drive media variables to the same cloud folder/token profile used by the Render prototype.
 6. Set `NEXT_PUBLIC_SERVER_URL` and `PAYLOAD_PUBLIC_SERVER_URL` to the Vercel production URL.
 7. Deploy.
-8. After the first successful deploy, keep `PAYLOAD_RUN_MIGRATIONS=true` while schema changes are still being delivered. It is safe for repeated deploys because Payload records applied migrations.
+8. Keep `PAYLOAD_RUN_MIGRATIONS=true` for runtime config compatibility with the existing Payload profile. The Vercel build path uses the lightweight idempotent deploy migration, because the full Payload CLI migration runner is not reliable inside the current serverless build graph.
 
 ## Data duplication note
 

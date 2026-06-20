@@ -1,6 +1,6 @@
 import type { Endpoint } from 'payload'
 
-import { normalizeArticleLanguageCode } from '@/lib/articleTranslations'
+import { normalizeArticleLanguageCode } from '../lib/articleTranslations.ts'
 
 type ArticleReactionBody = {
   articleSlug?: string
