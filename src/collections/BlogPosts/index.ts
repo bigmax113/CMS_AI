@@ -8,13 +8,13 @@ import {
 } from '@payloadcms/richtext-lexical'
 import type { PayloadRequest } from 'payload'
 
-import { absolutePublicURL, blogPostPublicPath, type PublicSite } from '../../lib/publicURLs'
-import { cleanArticleText, excerptArticleText, slugifyArticleTitle } from '../../lib/articleFields'
-import { articlesSlug } from '../Articles'
-import { authorsSlug } from '../Authors'
-import { blogTemplatesSlug } from '../BlogTemplates'
-import { mediaSlug } from '../Media'
-import { sitesSlug } from '../Sites'
+import { absolutePublicURL, blogPostPublicPath, type PublicSite } from '../../lib/publicURLs.ts'
+import { cleanArticleText, excerptArticleText, slugifyArticleTitle } from '../../lib/articleFields.ts'
+import { articlesSlug } from '../Articles/index.ts'
+import { authorsSlug } from '../Authors/index.ts'
+import { blogTemplatesSlug } from '../BlogTemplates/index.ts'
+import { mediaSlug } from '../Media.ts'
+import { sitesSlug } from '../Sites/index.ts'
 import {
   faqBlock,
   htmlEmbedBlock,
@@ -23,7 +23,7 @@ import {
   productCardBlock,
   productCardCarouselBlock,
   videoBlock,
-} from '../contentBlocks'
+} from '../contentBlocks.ts'
 
 export const blogPostsSlug = 'blog-posts'
 

@@ -2,7 +2,7 @@ import type { CollectionConfig } from 'payload'
 
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
-import { mediaSlug } from '../Media'
+import { mediaSlug } from '../Media.ts'
 
 export const authorsSlug = 'authors'
 

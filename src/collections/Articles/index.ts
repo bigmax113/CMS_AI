@@ -9,14 +9,14 @@ import {
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 
-import { absolutePublicURL, articlePublicPath } from '../../lib/publicURLs'
+import { absolutePublicURL, articlePublicPath } from '../../lib/publicURLs.ts'
 import {
   articleLanguageOptions,
   articleTranslationGroupFromArticle,
   inferArticleLanguageCode,
-} from '../../lib/articleTranslations'
-import { authorsSlug } from '../Authors'
-import { mediaSlug } from '../Media'
+} from '../../lib/articleTranslations.ts'
+import { authorsSlug } from '../Authors/index.ts'
+import { mediaSlug } from '../Media.ts'
 import {
   faqBlock,
   htmlEmbedBlock,
@@ -25,9 +25,9 @@ import {
   productCardBlock,
   productCardCarouselBlock,
   videoBlock,
-} from '../contentBlocks'
-import { articlePreviewPath } from '../../lib/articlePreview'
-import { cleanArticleText, excerptArticleText, slugifyArticleTitle } from '../../lib/articleFields'
+} from '../contentBlocks.ts'
+import { articlePreviewPath } from '../../lib/articlePreview.ts'
+import { cleanArticleText, excerptArticleText, slugifyArticleTitle } from '../../lib/articleFields.ts'
 
 export const articlesSlug = 'articles'
 

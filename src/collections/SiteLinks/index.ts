@@ -1,8 +1,8 @@
 import type { CollectionConfig } from 'payload'
 
-import { articlesSlug } from '../Articles'
-import { blogPostsSlug } from '../BlogPosts'
-import { sitesSlug } from '../Sites'
+import { articlesSlug } from '../Articles/index.ts'
+import { blogPostsSlug } from '../BlogPosts/index.ts'
+import { sitesSlug } from '../Sites/index.ts'
 
 export const siteLinksSlug = 'site-links'
 

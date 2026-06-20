@@ -1,8 +1,8 @@
 import type { Endpoint, Payload } from 'payload'
-import type { ContextChunk, ContextChunkRanker } from './localDocs'
+import type { ContextChunk, ContextChunkRanker } from './localDocs.ts'
 import type { Article } from '../payload-types'
 
-import { buildLocalDocContext, getLocalDocFolders, getLocalDocInventory } from './localDocs'
+import { buildLocalDocContext, getLocalDocFolders, getLocalDocInventory } from './localDocs.ts'
 import {
   articleLanguageDefinitions,
   articleLanguageDisplayCode,
@@ -10,8 +10,8 @@ import {
   inferArticleLanguageCode,
   normalizeArticleLanguageCode,
   stripArticleLanguagePrefix,
-} from '../lib/articleTranslations'
-import { slugifyArticleTitle } from '../lib/articleFields'
+} from '../lib/articleTranslations.ts'
+import { slugifyArticleTitle } from '../lib/articleFields.ts'
 
 const DEFAULT_XAI_BASE_URL = 'https://api.x.ai/v1'
 const DEFAULT_GROK_TEXT_MODEL = 'grok-4.3'

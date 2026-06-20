@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
-import { aiProjectsSlug } from '../AIProjects'
-import { promptTemplatesSlug } from '../PromptTemplates'
+import { aiProjectsSlug } from '../AIProjects/index.ts'
+import { promptTemplatesSlug } from '../PromptTemplates/index.ts'
 
 export const testRunsSlug = 'test-runs'
 

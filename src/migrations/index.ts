@@ -1,15 +1,15 @@
-import * as migration_20260521_154054_initial_cms_ai from './20260521_154054_initial_cms_ai';
-import * as migration_20260522_083600_media_embedded_image_fallback from './20260522_083600_media_embedded_image_fallback';
-import * as migration_20260522_092600_media_external_image_url from './20260522_092600_media_external_image_url';
-import * as migration_20260525_214800_content_evolution from './20260525_214800_content_evolution';
-import * as migration_20260525_221200_content_evolution_uuid from './20260525_221200_content_evolution_uuid';
-import * as migration_20260529_062900_media_google_drive_storage from './20260529_062900_media_google_drive_storage';
-import * as migration_20260529_073000_article_translation_groups from './20260529_073000_article_translation_groups';
-import * as migration_20260603_083000_expand_article_languages from './20260603_083000_expand_article_languages';
-import * as migration_20260603_101500_article_legacy_source from './20260603_101500_article_legacy_source';
-import * as migration_20260603_115000_article_legacy_source_payload_names from './20260603_115000_article_legacy_source_payload_names';
-import * as migration_20260610_091500_article_review_status_and_seo_overrides from './20260610_091500_article_review_status_and_seo_overrides';
-import * as migration_20260618_121500_article_view_counts from './20260618_121500_article_view_counts';
+import * as migration_20260521_154054_initial_cms_ai from './20260521_154054_initial_cms_ai.ts';
+import * as migration_20260522_083600_media_embedded_image_fallback from './20260522_083600_media_embedded_image_fallback.ts';
+import * as migration_20260522_092600_media_external_image_url from './20260522_092600_media_external_image_url.ts';
+import * as migration_20260525_214800_content_evolution from './20260525_214800_content_evolution.ts';
+import * as migration_20260525_221200_content_evolution_uuid from './20260525_221200_content_evolution_uuid.ts';
+import * as migration_20260529_062900_media_google_drive_storage from './20260529_062900_media_google_drive_storage.ts';
+import * as migration_20260529_073000_article_translation_groups from './20260529_073000_article_translation_groups.ts';
+import * as migration_20260603_083000_expand_article_languages from './20260603_083000_expand_article_languages.ts';
+import * as migration_20260603_101500_article_legacy_source from './20260603_101500_article_legacy_source.ts';
+import * as migration_20260603_115000_article_legacy_source_payload_names from './20260603_115000_article_legacy_source_payload_names.ts';
+import * as migration_20260610_091500_article_review_status_and_seo_overrides from './20260610_091500_article_review_status_and_seo_overrides.ts';
+import * as migration_20260618_121500_article_view_counts from './20260618_121500_article_view_counts.ts';
 
 export const migrations = [
   {

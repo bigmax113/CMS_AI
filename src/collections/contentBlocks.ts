@@ -1,6 +1,6 @@
 import type { Block, Field } from 'payload'
 
-import { mediaSlug } from './Media'
+import { mediaSlug } from './Media.ts'
 
 const productCardFields = (): Field[] => [
   {
