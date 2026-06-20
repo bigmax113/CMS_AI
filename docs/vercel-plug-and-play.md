@@ -24,8 +24,9 @@ This branch contains the same CMS/front/admin code as the Render build, with a V
 4. Set `DATABASE_URL` and `POSTGRES_URL` to the external Postgres connection string with `sslmode=require`.
 5. Set the Google Drive media variables to the same cloud folder/token profile used by the Render prototype.
 6. Set `NEXT_PUBLIC_SERVER_URL` and `PAYLOAD_PUBLIC_SERVER_URL` to the Vercel production URL.
-7. Deploy.
-8. Keep `PAYLOAD_RUN_MIGRATIONS=true` for runtime config compatibility with the existing Payload profile. The Vercel build path uses the lightweight idempotent deploy migration, because the full Payload CLI migration runner is not reliable inside the current serverless build graph.
+7. Keep `CMS_AI_SEED_DEMO_DATA=false` for a cloned production database. Set it to `true` only when bootstrapping an empty demo database.
+8. Deploy.
+9. Keep `PAYLOAD_RUN_MIGRATIONS=true` for runtime config compatibility with the existing Payload profile. The Vercel build path uses the lightweight idempotent deploy migration, because the full Payload CLI migration runner is not reliable inside the current serverless build graph.
 
 ## Data duplication note
 

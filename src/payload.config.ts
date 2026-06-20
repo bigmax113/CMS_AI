@@ -857,6 +857,15 @@ export default buildConfig({
       })
     }
 
+    const shouldSeedDemoData =
+      process.env.CMS_AI_SEED_DEMO_DATA === 'true' ||
+      (!process.env.VERCEL && process.env.NODE_ENV !== 'production')
+
+    if (!shouldSeedDemoData) {
+      payload.logger.info('Skipping demo seed data during production init')
+      return
+    }
+
     for (const [filename, externalImageURL] of Object.entries(plugPlayDemoImages)) {
       await ensureSeedMediaDocument(payload, {
         alt: filename,
