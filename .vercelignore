@@ -4,6 +4,7 @@
 !.env.vercel.example
 
 .git
+.vercel
 .next
 node_modules
 

@@ -18,23 +18,23 @@ import {
   translateUiEndpoint,
   updateArticleStatusesEndpoint,
   videoStatusEndpoint,
-} from './ai/endpoints'
-import { AIProjectsCollection, aiProjectsSlug } from './collections/AIProjects'
-import { ArticlesCollection, articlesSlug } from './collections/Articles'
-import { AuthorsCollection, authorsSlug } from './collections/Authors'
-import { BlogPostsCollection, blogPostsSlug } from './collections/BlogPosts'
-import { BlogTemplatesCollection, blogTemplatesSlug } from './collections/BlogTemplates'
-import { Media, mediaSlug } from './collections/Media'
-import { PromptTemplatesCollection, promptTemplatesSlug } from './collections/PromptTemplates'
-import { SiteLinksCollection, siteLinksSlug } from './collections/SiteLinks'
-import { SitesCollection, sitesSlug } from './collections/Sites'
-import { TestRunsCollection, testRunsSlug } from './collections/TestRuns'
-import { Users, usersSlug } from './collections/Users'
-import { migrations } from './migrations'
+} from './ai/endpoints.ts'
+import { AIProjectsCollection, aiProjectsSlug } from './collections/AIProjects/index.ts'
+import { ArticlesCollection, articlesSlug } from './collections/Articles/index.ts'
+import { AuthorsCollection, authorsSlug } from './collections/Authors/index.ts'
+import { BlogPostsCollection, blogPostsSlug } from './collections/BlogPosts/index.ts'
+import { BlogTemplatesCollection, blogTemplatesSlug } from './collections/BlogTemplates/index.ts'
+import { Media, mediaSlug } from './collections/Media.ts'
+import { PromptTemplatesCollection, promptTemplatesSlug } from './collections/PromptTemplates/index.ts'
+import { SiteLinksCollection, siteLinksSlug } from './collections/SiteLinks/index.ts'
+import { SitesCollection, sitesSlug } from './collections/Sites/index.ts'
+import { TestRunsCollection, testRunsSlug } from './collections/TestRuns/index.ts'
+import { Users, usersSlug } from './collections/Users.ts'
+import { migrations } from './migrations/index.ts'
 import {
   articleReactionEndpoint,
   newsletterSubscriptionEndpoint,
-} from './publicInteractions/endpoints'
+} from './publicInteractions/endpoints.ts'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
