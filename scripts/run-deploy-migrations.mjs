@@ -33,6 +33,14 @@ try {
   connected = true
 
   await client.query(`
+    DO $$
+    BEGIN
+      IF to_regtype('${schemaName}.enum_media_embedded_image_status') IS NOT NULL THEN
+        ALTER TYPE ${schema}."enum_media_embedded_image_status"
+          ADD VALUE IF NOT EXISTS 'stored-in-drive';
+      END IF;
+    END $$;
+
     ALTER TABLE ${schema}."articles"
       ADD COLUMN IF NOT EXISTS "view_count" numeric DEFAULT 1248;
 
