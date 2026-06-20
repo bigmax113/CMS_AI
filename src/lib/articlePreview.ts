@@ -1,6 +1,6 @@
 import { createHmac, timingSafeEqual } from 'node:crypto'
 
-import { articlePublicPath } from './publicURLs'
+import { articlePublicPath } from './publicURLs.ts'
 
 const previewSecret = () =>
   process.env.ARTICLE_PREVIEW_SECRET ||
