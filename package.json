@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Payload CMS AI prototype with AI content tools, custom admin, and plug-and-play Vercel/Render deployment profiles.",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "ci": "pnpm build",
